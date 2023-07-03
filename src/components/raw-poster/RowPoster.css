@@ -25,6 +25,8 @@
     transform: scale(1.1);
 }
 
+  
+
 .smallPoster{
     max-height: 150px;
     margin-right: 10px;
@@ -36,3 +38,18 @@
 .smallPoster:hover{
     transform: scale(1.1);
 }
+
+.topMovies{
+  
+    display: flex;
+    padding: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.topMovies::-webkit-scrollbar{
+    display:none;
+}
+
+
+/*TESTING*/
+

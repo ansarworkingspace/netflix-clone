@@ -35,18 +35,40 @@ const handleMovie = (id)=>{
 }
 
 
-  return (
-    <div className='row'>
-      <h2>{props.title}</h2>
-      <div className='posters'>
-        {movies.map((obj)=>
- <img onClick={()=>handleMovie(obj.id)} className={props.isSmall? 'smallPoster': 'poster'} src={`${imageUrl+obj.backdrop_path}`} alt="poster" />
-        )}
-          
-      </div>
-    { urlId &&  <Youtube opts={opts} videoId={urlId.key}/> }
+return (
+  <div className='row'>
+    <h2>{props.title}</h2>
+    <div className={props.topMovies ? 'topMovies' : 'posters'}>
+      {movies.map((obj, index) => (
+        <React.Fragment key={index}>
+          {props.topMovies && <div className='topMindex'>
+          <h2
+      style={{
+        width: '6.3rem',
+        fontSize: '13rem',
+        color: '#111',
+        WebkitTextStroke: '2px #a69898',
+        backgroundColor: '#111',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+      }}
+    >
+{index + 1}</h2></div>}
+          <img
+            onClick={() => handleMovie(obj.id)}
+            className={props.isSmall ? 'smallPoster' : 'poster'}
+            src={`${imageUrl + obj.backdrop_path}`}
+            alt="poster"
+          />
+        </React.Fragment>
+      ))}
     </div>
-  )
+    {urlId && <Youtube opts={opts} videoId={urlId.key} />}
+  </div>
+);
+
+
+
 }
 
 export default RowPoster

@@ -3,7 +3,7 @@ import Navbar from './components/Navbar/Navbar';
 import './App.css';
 import Banner from './components/banner/Banner';
 import RowPoster from './components/raw-poster/RowPoster';
-import {originals,actions} from './urls'
+import {originals,actions,topmovies,romancemovies,documentries} from './urls'
 
 function App() {
   return (
@@ -11,7 +11,10 @@ function App() {
      <Navbar/>
      <Banner/>
      <RowPoster url={originals} title='Netflix Orginals' />
+     <RowPoster  url={topmovies} title='Top Moives' topMovies />
      <RowPoster  url={actions} title='Action' isSmall />
+     <RowPoster  url={romancemovies} title='Romance Movies' isSmall />
+     <RowPoster  url={documentries} title='Documentaries' isSmall />
     </div>
   );
 }
