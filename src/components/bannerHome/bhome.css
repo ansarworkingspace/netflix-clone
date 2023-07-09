@@ -1,0 +1,56 @@
+.bannerhome{
+    background-image: url("/public/netflixbg.jpg");
+    background-size: cover;
+    height: 725px;
+    color: white;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-text-large {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.banner-text-small {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+}
+
+.email-input {
+  margin-right: 10px;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Add border with white color and transparency */
+  width: 18rem;
+  background-color:rgb(51, 51, 51, 0.5);
+  height: 2rem;
+  font-weight: 700;
+}
+
+.get-start-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  height: 3rem;
+  width: 10rem;
+  font-weight: 700;
+}
+.get-start-button:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(180, 3, 3);
+    font-weight: 900;
+    cursor: pointer;
+}
